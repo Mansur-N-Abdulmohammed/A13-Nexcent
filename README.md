@@ -1,1 +1,1 @@
-hello its my first time to working in github
+Hey whatsup , its one of my project , i hope you all like it 
