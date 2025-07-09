@@ -1,241 +1,80 @@
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    --height: 300vh;
-
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    display: grid;
-    background-color: white;
+  display: grid;
+  grid-template-columns: 1fr minmax(1000px, 5fr) 1fr;
+  grid-template-rows: 10vh 1500vh 30vh;
 
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
+  font-family: "Poppins", sans-serif;
 }
 
-.navbar {
-    background-color: white;
-    width: 100%;
-    height: 8vw;
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+.nav {
+  grid-column: 1/-1;
+  grid-row: 1/2;
+  position: fixed;
+  width: 100%;
+  height: 10vh;
+
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 1vh;
+  background-color: white;
 }
 
-.x3 {
-    width: 20%;
-    height: 100%;
-
+.x1 {
+  width: 25%;
+  height: 10vh;
+  background-color: aquamarine;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+.lef{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lef a{
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lef a img{
+  width: 70%;
 }
 
-.left {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.mid {
+  width: 50%;
 }
 
-.left a {
-    width: 100%;
-    height: 50%;
-    margin-left: 2vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.mid-ul {
+  width: 100%;
+  height: 10vh;
+
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-.left a img {
-    width: 100%;
+.mid-ul li {
+  list-style: none;
 }
 
-.middle {
-    width: 70%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    margin: 0vh 1vh;
-    gap: 2vh;
-}
-
-.middle li a {
-    text-decoration: none;
-    font-size: 1.5vw;
-    font-weight: 300;
-    color: black;
-}
-
-.middle li .home {
-    margin-right: 2.5vh;
-}
-
-.middle li a:hover {
-    animation: lists .2s linear forwards;
-}
-
-.middle li {
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.right {
-    margin: 0vh 2vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1vh;
-}
-
-.btn2 {
-    background-color: #4CAF4F;
-    border: .2vw solid #4CAF4F;
-    color: #F5F7FA;
-    width: 18vw;
-    height: 4vw;
-    border-radius: .8vw;
-    font-size: 1.4vw;
-    font-family: "Poppins", sans-serif;
-    font-weight: 360;
-    cursor: pointer;
-}
-
-.min {
-    background-color: blue;
-    width: 4vw;
-    height: 4vw;
-    display: none;
-}
-
-@keyframes lists {
-    0% {
-        color: rgb(0, 0, 0);
-    }
-
-    100% {
-        color: rgba(0, 0, 0, .2);
-    }
-}
-
-
-@media (min-width: 0px) and (max-width: 1000px) {
-    .navbar {
-        justify-content: space-between;
-        height: 15vh;
-        width: 100%;
-        gap: 10px;
-
-    }
-
-    .left {
-        width: 50%;
-
-    }
-
-    .left a {
-        width: 60%;
-        margin-left: 2vh;
-    }
-
-    .right {
-        display: none;
-        visibility: hidden;
-    }
-
-    .middle {
-        display: none;
-        visibility: hidden;
-    }
-
-    .min {
-        display: block;
-        float: right;
-        margin-right: 5vh;
-        width: 10vh;
-        height: 10vh;
-    }
-}
-
-.content {
-    background-color: white;
-    width: 100%;
-    height: var(--height);
-    display: grid;
-    grid-template-columns: 1fr minmax(2000px, 5fr) 1fr;
-    grid-template-rows: var(--height);
-}
-
-.mainCont {
-    background-color: rgb(207, 207, 207);
-    grid-column: 2/3;
-    grid-row: 1/3;
-    margin-top: 20vh;
-}
-
-.top {
-    width: 100%;
-    height: 70vw;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.O3 {
-    width: 45vw;
-    height: 45vw;
-    margin: 1vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.O3 img {
-    width: 100%;
-}
-
-.t-l {
-
-    align-items: flex-start;
-}
-
-.K9 {
-    margin-left: 5vh;
-    font-family: "Poppins", sans-serif;
-}
-
-.t-l h1 {
-    font-size: 5vh;
-}
-
-.t-l h1 span {
-    color: #4CAF4F;
-}
-.t-l p{
-font-size: 1vh;
-margin: 1vh 5vh
-}
-
-.t-l button {
-
-    background-color: #4CAF4F;
-    border: .2vw solid #4CAF4F;
-    color: #F5F7FA;
-    width: 10vw;
-    height: 4vw;
-    border-radius: .8vw;
-    font-size: 1.4vw;
-    font-family: "Poppins", sans-serif;
-    font-weight: 360;
-    cursor: pointer;
-    margin: 5vh 5vh;
-
+.mid-ul a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.7vh;
 }
 
 
@@ -243,19 +82,72 @@ margin: 1vh 5vh
 
 
 
-@media (min-width: 0px) and (max-width: 1000px) {
-    .top {
-        height: 100vh;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
 
-    }
 
-    .O3 {
-        margin: 1vh;
-        width: 100%;
-        height: 80vw;
-    }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+  background-color: rgb(121, 121, 243);
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+.footer {
+  background-color: #333;
+  grid-column: 1/-1;
+  grid-row: 3/4;
+}
+
+
+
+
+
+
+
+/* 1. Phones: Width up to 767px, Height up to 800px */
+@media (max-width: 767px) and (max-height: 800px) {
+  body {
+    background-color: lightblue;
+    height: 100vh;
+  }
+
+  .container {
+    background-color: rgb(121, 121, 243);
+    grid-column: -1/1;
+    grid-row: 2/3;
+  }
+}
+
+/* 2. Pads / Tablets: Width 768px–1024px, Height up to 1000px */
+@media (min-width: 768px) and (max-width: 1024px) and (max-height: 1000px) {
+  body {
+    background-color: lightgreen;
+    height: 100vh;
+  }
+
+  .container {
+    background-color: rgb(121, 121, 243);
+    grid-column: -1/1;
+    grid-row: 2/3;
+  }
+}
+
+/* 3. Monitors: Width 1025px+, Height more than 1000px */
+@media (min-width: 1000px) and (min-height: 1000px) {
+  body {
+    background-color: lightcoral;
+    height: 100vh;
+  }
 }
