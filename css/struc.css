@@ -26,6 +26,7 @@ body {
   justify-content: space-around;
   gap: 1vh;
   background-color: white;
+  margin: 0 auto;
 }
 
 .x1 {
@@ -77,8 +78,18 @@ body {
   font-size: 1.7vh;
 }
 
+.minu{
+  width: 8vh;
+  height: 8vh;
+  margin: 0vh 2vh;
+  display: none;
+}
 
-
+  .mm{
+    width: 8vh;
+    height: 8vh;
+    background-color: black;
+  }
 
 
 
@@ -124,10 +135,35 @@ body {
   }
 
   .container {
-    background-color: rgb(121, 121, 243);
+    background-color: lightblue;
     grid-column: -1/1;
     grid-row: 2/3;
   }
+  .nav{
+    justify-content: start;
+    width: 100vw;
+
+  }
+  .mid ,.rig{
+    display: none;
+    visibility: hidden;
+  }
+  .lef{
+    width: 30%;
+  }
+  .minu{
+    display:block;
+    flex-grow: 1;
+    width: 10%;
+    height: 10vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-right: 4vh;
+  }
+
+
 }
 
 /* 2. Pads / Tablets: Width 768px–1024px, Height up to 1000px */
@@ -136,9 +172,11 @@ body {
     background-color: lightgreen;
     height: 100vh;
   }
-
+.nav{
+  width: 100vw;
+}
   .container {
-    background-color: rgb(121, 121, 243);
+    background-color: lightgreen;
     grid-column: -1/1;
     grid-row: 2/3;
   }
