@@ -28,7 +28,18 @@ body {
     height: 100%;
     background-color: red;
 }
-
+.left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left img{
+    width: 100%;
+}
+.middle{
+    background-color: aqua;
+    width: 70%;
+}
 .min {
     background-color: blue;
     width: 4vw;
@@ -46,7 +57,11 @@ body {
 
     .left {
        width: 50vw;
-
+       justify-content: start;
+    }
+    .left img{
+        width: 50%;
+        margin-left:2vh;
     }
 
     .right {
