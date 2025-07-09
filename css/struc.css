@@ -104,5 +104,8 @@ body {
     .navbar {
         height: 5vw;
     }
+    .left img{
+        width: 70%;
+    }
 
 }
