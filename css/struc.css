@@ -7,15 +7,12 @@
 
 body {
   display: grid;
-  grid-template-columns: 1fr minmax(1000px, 5fr) 1fr;
+  grid-template-columns: 1fr minmax(1100px, 5fr) 1fr;
   grid-template-rows: 10vh 1500vh 30vh;
-
   font-family: "Poppins", sans-serif;
 }
 
 .nav {
-  grid-column: 1/-1;
-  grid-row: 1/2;
   position: fixed;
   width: 100%;
   height: 10vh;
@@ -53,11 +50,12 @@ body {
 }
 
 .lef a img {
-  width: 70%;
+  width: 60%;
 }
 
 .mid {
   width: 50%;
+  flex-grow: 1;
 }
 
 .mid-ul {
@@ -90,23 +88,25 @@ body {
 .mm {
   width: 7vh;
   height: 7vh;
-  background-color: white;
-  border-radius: 2vh;
-  border: .7vh solid black;
-
+  background-color: #cccccc;
+  border-radius: 1vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  gap: 1vh;
+  gap: 1.2vh;
   cursor: pointer;
+}
+
+.mm:hover {
+  background-color: rgb(231, 231, 231);
 }
 
 .x2 {
   width: 5.5vh;
-  height: 1vh;
+  height: .7vh;
   border-radius: 10vh;
-  background-color: #333;
+  background-color: white;
 }
 
 .rig a {
@@ -145,7 +145,7 @@ body {
 }
 
 .mid-ul li a:hover {
-  animation:list-style .1s linear forwards ;
+  animation: list-style .1s linear forwards;
 
 }
 
@@ -153,37 +153,92 @@ body {
   from {
     color: black;
   }
+
   to {
     color: rgba(0, 0, 0, .4);
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .container {
   background-color: rgb(121, 121, 243);
   grid-column: 2/3;
   grid-row: 2/3;
+  overflow: hidden;
 }
+
+
+.top {
+  margin-top: 15vh;
+  width: 100%;
+  height: 70vh;
+  background-color: #00c006;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.tl,
+.tr {
+  width: 49%;
+  height: 90%;
+  background-color: #333;
+}
+.x3 img{
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .footer {
   background-color: #333;
   grid-column: 1/-1;
   grid-row: 3/4;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -225,12 +280,28 @@ body {
     flex-grow: 1;
     width: 10%;
     height: 10vh;
-
     display: flex;
     align-items: center;
     justify-content: end;
     margin-right: 4vh;
   }
+
+  /* container */
+  .top {
+    background-color: orange;
+    height: 150vh;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .tl,
+  .tr {
+    width: 80vw;
+    height: 80vw;
+  }
+
 
 
 }
@@ -251,6 +322,20 @@ body {
     grid-column: -1/1;
     grid-row: 2/3;
   }
+
+  .top {
+    width: 100vw;
+    height: 60vh;
+    background-color: orange;
+    justify-content: space-around;
+
+  }
+
+  .tl,
+  .tr {
+    width: 48%;
+
+  }
 }
 
 /* 3. Monitors: Width 1025px+, Height more than 1000px */
@@ -258,5 +343,12 @@ body {
   body {
     background-color: lightcoral;
     height: 100vh;
+  }
+
+  .x1 a img {
+    width: 50%;
+  }
+  .top{
+    height: 60vh;
   }
 }
