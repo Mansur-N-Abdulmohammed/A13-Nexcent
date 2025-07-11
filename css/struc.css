@@ -173,7 +173,7 @@ body {
 .B1 {
   width: 100%;
   height: auto;
-  background-color: #333;
+  background-color: #707070;
 
   display: flex;
   flex-direction: row;
@@ -207,6 +207,11 @@ body {
 
 .B1-left h1 {
   font-size: 2.5vw;
+  color: #333;
+}
+
+.B1-left h1 span {
+  color: #00c006;
 }
 
 .B1-left p {
@@ -225,7 +230,7 @@ body {
   align-items: center;
   justify-content: center;
   color: white;
-  font-size:1.4vw ;
+  font-size: 1.4vw;
 }
 
 .B1-left a:hover {
@@ -233,10 +238,115 @@ body {
 }
 
 
+.B2 {
+  width: 100%;
+  margin: 3vw 0vw;
+  height: auto;
+  background-color: #949494;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.B2 h1,
+.B2 p {
+  padding: 3vw 0vh;
+  text-align: center;
+}
+
+.B2 h1 {
+  font-size: 2.8vw;
+
+}
+
+.B2 p {
+  font-size: 1vw;
+}
 
 
+.B3 {
+  width: 100%;
+  height: 20vh;
+  margin: 0vw 0vw 3vw 0vw;
+  background-color: #949494;
+
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: 1fr;
+
+  align-items: center;
+  justify-items: center;
+
+  gap: 5vw;
+}
+
+.A {
+  width: 100%;
+  height: 40%;
 
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.A img {
+  width: 90%;
+}
+
+
+.B4 {
+  width: 100%;
+  height: 35vh;
+  margin: 0vw 0vw 3vw 0vw;
+  background-color: #949494;
+
+  display: grid;
+  grid-template-columns: 1fr repeat(3, 3fr) 1fr;
+  grid-template-rows: 1fr;
+
+  align-items: center;
+  justify-items: center;
+
+  gap: 3vw;
+}
+
+.A1 {
+  background-color: red;
+  width: 100%;
+  height: 100%;
+}
+
+.A1-1 {
+  background-color: pink;
+  width: 100%;
+  height: 100%;
+}
+
+.A1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.A1 img{
+  width: 4vw;
+}
+
+.A1 h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 1.4vw;
+}
+
+.A1 p {
+  width: 100%;
+  padding: 2vw 0vw;
+  background-color: blue;
+  text-align: center;
+  font-size: .8vw;
+}
 
 
 
@@ -321,20 +431,61 @@ body {
     width: 100%;
     height: 45%;
   }
-  .B1-left{
+
+  .B1-left {
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 7vh 0vh;
   }
-  .B1-left h1{
-font-size: 5vw;
-text-align: center;
-  }
-  .B1-left p{
-font-size: 1.5vw;
+
+  .B1-left h1 {
+    font-size: 5vw;
+    text-align: center;
   }
 
+  .B1-left p {
+    font-size: 1.5vw;
+  }
+
+  .B1-right img {
+    width: 60%;
+  }
+
+  .B2 {
+    width: 100vw;
+    margin: 5vw 0vw;
+  }
+
+  .B2 h1,
+  .B2 p {
+    padding: 6vw 0vw;
+  }
+
+  .B2 h1 {
+    font-size: 7vw;
+  }
+
+  .B2 p {
+    font-size: 3vw;
+  }
+
+  .B3 {
+    width: 100vw;
+  }
+
+    .B4{
+    width: 100vw;
+  }
+  .A1 h1{
+    font-size: 3vw;
+  }
+  .A1 img{
+    width: 5vw;
+  }
+  .A1 p{
+font-size: 1.7vw;
+  }
 }
 
 /* 2. Pads / Tablets: Width 768px–1024px, Height up to 1000px */
@@ -360,8 +511,17 @@ font-size: 1.5vw;
     align-items: center;
   }
 
+  .B2 {
+    width: 100vw;
+  }
 
+  .B3 {
+    width: 100vw;
+  }
 
+  .B4{
+    width: 100vw;
+  }
 }
 
 /* 3. Monitors: Width 1025px+, Height more than 1000px */
@@ -374,6 +534,5 @@ font-size: 1.5vw;
   .x1 a img {
     width: 50%;
   }
-
 
 }
